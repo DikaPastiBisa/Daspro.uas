@@ -22,3 +22,10 @@ int main() {
     for (int i = 0; i < MAX_TANAH; i++) {
         cout << " Lokasi: " << tanahs[i].lokasi << " , Harga: " << fixed << tanahs[i].harga << endl;
     }
+// Menampilkan lokasi tanah sawah yang tersedia (belum terjual)
+    cout << endl << "Lokasi Tanah Sawah yang Tersedia (Belum Terjual):" << endl;
+    for (int i = 0; i < MAX_TANAH; i++) {
+        if (!tanahs[i].terjual) {
+            cout << "Lokasi: " << tanahs[i].lokasi << endl;
+        }
+    }
