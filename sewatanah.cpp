@@ -29,3 +29,16 @@ int main() {
             cout << "Lokasi: " << tanahs[i].lokasi << endl;
         }
     }
+// Menghitung total harga jual jika tanah sawah dibeli
+    double totalHargaJual = 0;
+    for (int i = 0; i < MAX_TANAH; i++) {
+        if (!tanahs[i].terjual) {
+            totalHargaJual += tanahs[i].harga;
+        }
+    }
+
+    cout << endl << "Total Harga Jual Jika Semua Tanah Sawah Dibeli: " << fixed << totalHargaJual << endl;
+
+    system("pause");
+    return 0;
+}
