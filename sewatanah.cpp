@@ -2,6 +2,7 @@
 #include <conio.h>
 using namespace std;
 
+
 struct TanahSawah {
     float luas;
     string lokasi;
