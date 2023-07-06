@@ -35,11 +35,14 @@ void displayTanahSawah(const TanahSawah* tanahs, int size) {
 }
 
 // Fungsi untuk melakukan sorting manual
-void manualSort(TanahSawah* tanahs, int size) {
+void bubbleSort(TanahSawah arr[], int size) {
     for (int i = 0; i < size - 1; i++) {
         for (int j = 0; j < size - i - 1; j++) {
-            if (tanahs[j].harga > tanahs[j + 1].harga) {
-                swap(tanahs[j], tanahs[j + 1]);
+            if (arr[j].harga > arr[j + 1].harga) {
+                // Tukar posisi elemen jika elemen saat ini lebih besar dari elemen berikutnya
+                TanahSawah temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
             }
         }
     }
@@ -58,8 +61,8 @@ int main() {
     // Menampilkan seluruh data tanah sawah
     displayTanahSawah(tanahs, MAX_TANAH);
 
-    // Sorting tanah sawah berdasarkan harga terendah sampai tertinggi
-    manualSort(tanahs, MAX_TANAH);
+   // Sorting tanah sawah berdasarkan harga terendah sampai tertinggi
+    bubbleSort(tanahs, MAX_TANAH);
 
     cout << endl << "Tanah Sawah dengan Harga Terendah sampai Tertinggi:" << endl;
     for (int i = 0; i < MAX_TANAH; i++) {
