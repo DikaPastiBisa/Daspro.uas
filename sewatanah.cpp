@@ -10,11 +10,6 @@ struct TanahSawah {
     bool terjual;
 };
 
-// Fungsi untuk membandingkan harga tanah sawah (untuk sorting)
-bool comparePrice(const TanahSawah& a, const TanahSawah& b) {
-    return a.harga < b.harga; // Mengubah tanda perbandingan menjadi kurang dari
-}
-
 // Fungsi untuk menampilkan seluruh data tanah sawah
 void displayTanahSawah(const TanahSawah* tanahs, int size) {
     cout << "Data Tanah Sawah:" << endl;
